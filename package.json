@@ -1,0 +1,25 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "### Overview",
+  "main": "server.js",
+  "scripts": {
+    "test": "none",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lolo-bc/burger-noms.git"
+  },
+  "author": "Lauren Cameron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lolo-bc/burger-noms/issues"
+  },
+  "homepage": "https://github.com/lolo-bc/burger-noms#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "mysql": "^2.18.1"
+  }
+}
