@@ -14,11 +14,12 @@ var orm = {
     });
   },
 
-  insertOne: function(tableName, burgerName, isEaten, cb) {
+  create: function(tableName, colNames, values, cb) {
     isEaten = false;
-    var newBorger = "INSERT INTO " + tableName +  "( VALUES ?)";
+    // console.log(newBorger, burgerName, isEaten);
+    var newBorger = "INSERT INTO " + tableName + "(" + colNames + ")" + "VALUES (?,?)";
 
-    connection.query(newBorger, burgerName, function(err, result) {
+    connection.query(newBorger, values, function(err, result) {
       if (err) {
         throw err;
       }
@@ -27,7 +28,7 @@ var orm = {
   },
 
 
-  updateOne: function(condition, cb) {
+  update: function(condition, cb) {
     var queryString = "UPDATE burgers set BOOLEAN false WHERE";
     queryString += condition;
 
