@@ -1,13 +1,13 @@
-const express = require("express");
+var express = require("express");
 
-const router = express.Router();
+var router = express.Router();
 
-const burger = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-  burger.selectAll(function(data) {
-    const hbsObject = {
-      burger: data
+  burger.all(function(data) {
+    var hbsObject = {
+      burgers: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -15,9 +15,9 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  const newBurgerNotEaten = false
+  var newBurgerNotEaten = false
   burger.insertOne(["burger_name", "devoured"], 
-  [red.body.burger, newBurgerNotEaten],
+  [req.body.burger, newBurgerNotEaten],
   function(result) {
     res.json({ id: result.insertId })
   });
@@ -38,5 +38,4 @@ router.put("/api/update/:id", function(req, res) {
 
 
 
-// Export routes for server.js to use.
 module.exports = router;
