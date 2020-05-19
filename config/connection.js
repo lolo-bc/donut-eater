@@ -1,7 +1,6 @@
 // Set up MySQL connection.
 var mysql = require("mysql");
 
-var dbURL = 'mysql://bfd81f9d05e7b9:7966e4a9@us-cdbr-east-06.cleardb.net/heroku_e45707c9351e030?reconnect=true'
 
 // var connection = mysql.createConnection({
 //   host: "localhost",
