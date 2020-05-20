@@ -11,14 +11,10 @@ var burger = {
         orm.create("burgers", ["burger_name", "devoured"], [burgerName, false], cb)
     },
 
-    // insertOne: function(objColVals, condition, cb) {
-    //     orm.updateOne("cats", objColVals, condition, function(res) {
-    //       cb(res);
-    //     });
-    //   },
 
-    updateOne: function(condition, cb) {
-        orm.update("burgers", condition, function(res) {
+    update: function(condition, cb) {
+        console.log(condition);
+        orm.update(condition, function(res) {
             cb(res);
         });
     },

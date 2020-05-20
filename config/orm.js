@@ -29,7 +29,7 @@ var orm = {
 
 
   update: function(condition, cb) {
-    var queryString = "UPDATE burgers set BOOLEAN false WHERE";
+    var queryString = "UPDATE burgers SET devoured = true WHERE ";
     queryString += condition;
 
     connection.query(queryString, function(err, result) {

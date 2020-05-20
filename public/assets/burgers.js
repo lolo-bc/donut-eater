@@ -1,9 +1,5 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-
-  
     $(".create-form").on("submit", function(event) {
-      // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
       var newBurger = {
@@ -18,6 +14,29 @@ $(function() {
       }).then(
         function() {
           console.log("created new burger");
+          location.reload();
+        }
+      );
+    });
+
+
+    $(".eatdaburger").on("click", function(event) {
+      var id = $(this).data("id");
+      var newDevoured = true;
+      console.log($(this).data);
+
+      var devouredState = {
+        devoured: newDevoured
+      };
+      console.log(devouredState);
+
+  
+      $.ajax("/api/update/" + id, {
+        type: "PUT",
+        data: devouredState
+      }).then(
+        function() {
+          console.log("changed sleep to", newDevoured);
           // Reload the page to get the updated list
           location.reload();
         }
