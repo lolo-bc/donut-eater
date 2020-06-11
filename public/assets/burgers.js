@@ -42,5 +42,17 @@ $(function() {
         }
       );
     });
+
+    $(".delete").on("click", function(event) {
+
+      $.ajax("/api/delete", {
+        type: "DELETE",
+      }).then(
+        function() {
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
   });
   

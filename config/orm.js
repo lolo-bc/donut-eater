@@ -41,6 +41,18 @@ var orm = {
     });
   },
 
+  delete: function(cb) {
+    var queryString = "DELETE FROM burgers WHERE devoured = true";
+    
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+
 };
 
 module.exports = orm;
