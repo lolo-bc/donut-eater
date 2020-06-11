@@ -19,8 +19,9 @@ This is a simple one page site that loggs with MySQL, Node, Express, Handlebars 
 
 ![screenshot](public/assets/Screenshot.png)
 
-public/assets/Screenshot.png
+### Deployed site
 
+Checkout DONUT EATER: https://rocky-earth-61463.herokuapp.com/
 
 ### Directory structure
 ```
