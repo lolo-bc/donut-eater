@@ -1,3 +1,118 @@
 body {
-    background-color: rgb(218, 162, 11);
+    /* background-color: rgb(218, 162, 11); */
+    background-image: url(https://iamericmin.github.io/images/donuts.png);
+    background-size: 100%;
+    font-family: 'Gochi Hand', cursive;
 }
+
+.container {
+    width: 900px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #8CD1C7;
+    border-style: solid;
+    padding: 10PX;
+    display: flex;
+    /* flex-direction: row; */
+    flex-flow: row wrap;
+    overflow: scroll;
+}
+
+h1 {
+    font-size: 40px; 
+    font-weight: 500;
+    text-align: center;
+    color: #F16FA7;
+    -webkit-text-stroke: 2px black;
+    margin: 0px;
+    font-weight: 500;
+}
+
+h2 {
+    text-align: center;
+}
+#lildonut {
+    position: relative;
+    top: 3px;
+    margin: -2px
+}
+
+.header {
+    width: 700px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    overflow: scroll;
+}
+
+li {
+    font-size: 23px;
+    background-color: white;
+    margin: 5px;
+    border-style: solid;
+    padding: 5px;
+    text-transform: uppercase;
+    padding-left: 8px;
+    height: 30px;
+}
+/* .eatdaburger {
+    top: -2px;
+} */
+
+.flexrow {
+    width: 450px;
+    margin-left: -15px;
+}
+
+.flexrow1 {
+    width: 900px;
+}
+
+
+.hover01 img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 img:hover {
+	-webkit-transform: scale(1.4);
+    transform: scale(1.4);
+    padding-left: 3px;
+}
+
+
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+  .form-inline label {
+    margin: 5px 10px 5px 0;
+  }
+
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    /* background-color: rgb(226, 191, 206); */
+    color: white;
+    border: px solid;
+    border-color: black;
+    width: 640px;
+  }
+  
+  .form-inline button {
+    /* padding: 10px 20px; */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+  }
+  
+ 
+  
